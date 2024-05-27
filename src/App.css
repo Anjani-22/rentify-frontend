@@ -1,80 +1,288 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
 
-/* styles.css */
-
-/* Layout styles */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
 }
 
-.property-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-/* Form styles */
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-label {
-  display: block;
-  margin-bottom: 8px;
-}
-
-.form-input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Button styles */
-.button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  background-color: #007bff;
+/* Navbar */
+.navbar {
+  background-color: #333;
   color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Login and Register */
+.auth-container {
+  max-width: 400px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+  margin-bottom: 1rem;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  background: #5cb85c;
+  color: #fff;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-.button:hover {
-  background-color: #0056b3;
+.auth-container button:hover {
+  background: #4cae4c;
 }
 
-.button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-
-
-
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Property List */
+.property-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.property-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  padding: 1rem;
+  flex: 0 0 48%;
+}
+
+.property-card h3 {
+  margin-top: 0;
+}
+
+.property-card button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.property-card button:hover {
+  background: #0056b3;
+}
+
+.property-card button.like-button {
+  background: #28a745;
+}
+
+.property-card button.like-button:hover {
+  background: #218838;
+}
+
+.property-card button.interested-button {
+  background: #ffc107;
+}
+
+.property-card button.interested-button:hover {
+  background: #e0a800;
+}
+
+/* Filter */
+.filter-container {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.filter-container select,
+.filter-container input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination button {
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  background: #fff;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
+.pagination button.active {
+  background: #007bff;
+  color: #fff;
+}
+
+.pagination button:hover {
+  background: #0056b3;
+  color: #fff;
+}
+
+/* Alerts */
+.alert {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+
+.alert.success {
+  background: #d4edda;
+  color: #155724;
+}
+
+.alert.error {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Home Page */
+.home-container {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.home-container h1 {
+  margin-bottom: 2rem;
+}
+
+.home-container .cta-buttons a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.home-container .cta-buttons a:hover {
+  background: #0056b3;
+}
+
+/* Property Details */
+.property-details-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.property-details-container h2 {
+  margin-top: 0;
+}
+
+.property-details-container p {
+  line-height: 1.6;
+}
+
+.property-details-container .contact-seller {
+  margin-top: 2rem;
+}
+
+/* Add/Edit Property */
+.property-form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.property-form-container h2 {
+  margin-bottom: 1rem;
+}
+
+.property-form-container input,
+.property-form-container select,
+.property-form-container textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.property-form-container button {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.property-form-container button:hover {
+  background: #0056b3;
+}
+
+/* Spinner */
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner div {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
